@@ -122,8 +122,8 @@ header ul li a:hover, a:focus {
 
 .menu_icon {
 	cursor: pointer;
-	width: fit-content;
-	height: fit-content;
+	width: 6vh;
+	height: 6vh;
 	fill: #fff;
 	z-index: 3;
 }
