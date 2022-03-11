@@ -112,6 +112,7 @@ header ul li a:hover {
 
 header ul li a:hover, a:focus {
 	background-size: 100% 2px;
+	outline: none;
 }
 
 .header_logo {
