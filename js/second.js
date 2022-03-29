@@ -5,8 +5,8 @@ const imagen4 = document.getElementById('imagen4');
 const imagen5 = document.getElementById('imagen5');
 const maps_option = document.getElementById('map_button');
 
-const iconoMenu = document.querySelector('#icono-menu');
-const menu = document.querySelector('#menu');
+const menu_icon = document.getElementById('menu_icon');
+const menu = document.getElementById('menu');
 
 const botonAceptarCookies = document.getElementById('btn-aceptar-cookies');
 const botonNoAceptarCookies = document.getElementById('btn-no_aceptar-cookies');
@@ -24,6 +24,16 @@ const footer_absolute = document.getElementById('footer_absolute');
 
 const fondoCard = document.getElementById('fondo-job');
 const body = document.body;
+
+const bot_icon = document.getElementById('chatbot_icon');
+const bot_cnt = document.getElementById('chatbot_content');
+
+const questions_container = document.getElementById('questions');
+const bot_message = document.getElementById('bot_message');
+const bot_answer = document.getElementById('bot_answer');
+const back = document.getElementById('back');
+const questions = ["¿En qué horario se reúnen para actividades?", "¿A partir de qué edad pueden participar?", "¿Dónde se ubican?", "¿Qué necesito para inscribir a mi hijo/a a los Scouts?", "¿Cuál es la cuota anual y qué incluye?", "¿A qué edad me puedo unir a los Scouts?"];
+const answers = ["Nos reunimos todos los sábados a partir de las 4:00 hasta las 6:00 de la tarde", "A partir de los 7 los cumplidos", "Nos ubicamos en: 04870, C. 8 200, Espartaco, Coyoacán, Ciudad de México, CDMX", "Que su hijo/a asista a actividades tres sábados para que tome la decisión", "La cuota anual incluye seguro scout, derecho a participar en las actividades en el parque y a todas las actividades a nivel provincia y/o nacional, material para las actividades.", "Para ser muchacho/a debes tener entre 7 y 22 años cumplidos, si tienes más puedes participar como voluntario"];
 
 try {
 	const cnt = document.querySelector('.cnt');
@@ -98,8 +108,12 @@ if (maps_option) {
 
 function menu_f(){
 	menu.classList.toggle('active_menu');
+	menu_icon.classList.toggle('cross');
+	if (bot_cnt && bot_icon) {
+		bot_icon.classList.remove('active_bot');
+		bot_cnt.classList.remove('active_bot');
+	}
 }
-
 
 
 
@@ -193,3 +207,70 @@ function closeCard(number){
 	}, 600);
 }
 
+
+
+if (bot_cnt && bot_icon) {
+	bot_icon.addEventListener('click', () => {
+		bot_icon.classList.toggle('active_bot');
+		bot_cnt.classList.toggle('active_bot');
+	});
+
+	reset_questions();
+}
+
+function question_answer(number, id) {
+
+	let n = 0;
+	let i = 0;
+	const actual_question = document.getElementById(id);
+
+	if (questions_container.children.length > 1) {
+		while (n <= questions.length - 1) {
+			var child = questions_container.children[i];
+			var question_id = child.getAttribute("id");
+			if (question_id === id) {
+				i++;
+				bot_message.classList.add("element_hidden");
+				actual_question.classList.remove("hoverable");
+				actual_question.removeAttribute("onclick");
+				bot_answer.innerHTML = answers[number];
+				bot_answer.classList.remove("element_hidden");
+				back.classList.remove("element_hidden");
+			}
+			else {
+				child.remove();
+			}
+			n++;
+		}
+	}
+}
+
+if (back) {
+	back.addEventListener('click', () => {
+		reset_questions();
+	});
+}
+
+function reset_questions() {
+	let n = 0;
+
+	while (questions_container.firstChild) {
+		questions_container.firstChild.remove();
+	}
+
+	bot_message.classList.remove("element_hidden");
+	bot_answer.innerHTML = "";
+	bot_answer.classList.add("element_hidden");
+	back.classList.add("element_hidden");
+
+	while (n <= questions.length - 1) {
+		let question_element = document.createElement('div');
+		question_element.classList.add('question');
+		question_element.classList.add('hoverable');
+		questions_container.appendChild(question_element);
+		question_element.textContent= questions[n];
+		question_element.setAttribute("onclick", "question_answer("+ n + ", this.id);");
+		question_element.setAttribute("id", "question_" + n);
+		n++;
+	}
+}

@@ -16,7 +16,7 @@
 		<div class="div_frase reveal-text">
 			<p class="frase">¡QUICHÉ SIEMPRE!... <br> ¡TRAS EL TRIUNFO!</p>
 		</div>
-		<svg focusable="true" onclick="menu_f()" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
+		<svg focusable="true" onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
   			<rect y="0" width="100" height="20" rx="8"></rect>
   			<rect y="30" width="100" height="20" rx="8"></rect>
   			<rect y="60" width="100" height="20" rx="8"></rect>
@@ -110,13 +110,14 @@
 	</ul>
 	
 
-	<div class="video_responsive images abajo" id="video_pop-up">
+	<div class="video_responsive images fondo" id="video_pop-up">
 		<div class="video_pop-up activo">
 			<div class="close_video"><p id="close_video">X</p></div>
 			
 			<div class="video_container">
 				<video class="video" id="video" controls controlsList="nodownload" oncontextmenu="return false;">
 					<source src="assets/Asociacion_Scout.mp4" type="video/mp4">
+					<source src="assets/Asociacion_Scout.webm" type="video/webm">
 					Su navegador no soporta la etiqueta de vídeo.
 				</video>
 			</div>
