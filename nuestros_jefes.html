@@ -12,11 +12,11 @@
 <body>
 	
 	<header>
-		<a href="http://www.scouts28quiche.org/index.html"><img src="assets/logo_header.png" class="header_logo"></a>
+		<a class="header_link_logo" href="http://www.scouts28quiche.org/index.html"><img src="assets/logo_header.png" class="header_logo"></a>
 		<div class="div_frase reveal-text">
 			<p class="frase">¡QUICHÉ SIEMPRE!... <br> ¡TRAS EL TRIUNFO!</p>
 		</div>
-		<svg onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
+		<svg tabindex="0" onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
   			<rect y="0" width="100" height="20" rx="8"></rect>
   			<rect y="30" width="100" height="20" rx="8"></rect>
   			<rect y="60" width="100" height="20" rx="8"></rect>
@@ -42,8 +42,30 @@
 					<img class="profile_picture" src="assets/javier.jpg">
 				</div>
 				<p class="name">Jefe de grupo</p>
-				<div class="job_info" id="job_1" onclick="openCard(1)">Ver más</div>
+				<div class="job_info" tabindex="0" id="job_1" onclick="openCard(1)">Ver más</div>
 			</figure>
+
+			<div class="job images abajo" id="modal_job_1">
+				<div class="card">
+					<figure>
+						<div class="close_card">
+							<p id="close_card_btn_1" onclick="closeCard(1)" tabindex="0">X</p>
+						</div>
+						<p class="name">Javier Vargas</p>
+						<div class="modal_picture_container" oncontextmenu="return false;">
+							<img src="assets/javier.jpg" alt="" class="modal_picture">
+						</div>
+						<p class="name">Jefe de grupo</p>
+						<hr class="card_border">
+						<div class="card_info">
+							<h2>Información del puesto</h2>
+							<p>Es el representante del mismo y preside a los órganos directivo y operativo, los cuales son: el Consejo y Comité de Grupo.</p>
+							<p class="second_p">Es el responsable de vigilar que se aplique el Programa de Jóvenes en las secciones de acuerdo a lo señalado en los ordenamientos, así como el desarrollo de los recursos adultos y la ejecución del Plan de Trabajo del grupo alineado al de Provincia.</p>
+						</div>
+
+					</figure>
+				</div>
+			</div>
 
 			<figure>
 				<p class="name">Daniel Popoca</p>
@@ -51,8 +73,28 @@
 					<img class="profile_picture" src="assets/daniel.jpg">
 				</div>
 				<p class="name">Jefe de tropa scout</p>
-				<div class="job_info" id="job_2" onclick="openCard(2)">Ver más</div>
+				<div class="job_info" tabindex="0" id="job_2" onclick="openCard(2)">Ver más</div>
 			</figure>
+
+			<div class="job images abajo" id="modal_job_2">
+				<div class="card">
+					<figure>
+						<div class="close_card">
+							<p id="close_card_btn_2" onclick="closeCard(2)" tabindex="0">X</p>
+						</div>
+						<p class="name">Daniel Popoca</p>
+						<div class="modal_picture_container" oncontextmenu="return false;">
+							<img src="assets/daniel.jpg" alt="" class="modal_picture">
+						</div>
+						<p class="name">Jefe de tropa scout</p>
+						<hr class="card_border">
+						<div class="card_info">
+							<h2>Información del puesto</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus dolorum eaque, suscipit aspernatur, eveniet, doloremque id optio consequuntur veniam, culpa ipsum rerum provident! Incidunt obcaecati, quos asperiores aut omnis.Voluptatem officiis explicabo repellat quasi facilis. Deserunt quae ex id, cum quo rerum, ab cumque aliquid harum doloribus modi omnis aperiam voluptatum rem eveniet repellendus, tempore! Voluptatum, voluptatibus odio suscipit?</p>
+						</div>
+					</figure>
+				</div>
+			</div>
 
 			<figure>
 				<p class="name">Tisha Santana</p>
@@ -60,8 +102,28 @@
 					<img class="profile_picture" src="assets/tisha.jpg">
 				</div>
 				<p class="name">Consejera Rover</p>
-				<div class="job_info" id="job_3" onclick="openCard(3)">Ver más</div>
+				<div class="job_info" tabindex="0" id="job_3" onclick="openCard(3)">Ver más</div>
 			</figure>
+
+			<div class="job images abajo" id="modal_job_3">
+				<div class="card">
+					<figure>
+						<div class="close_card">
+							<p id="close_card_btn_3" onclick="closeCard(3)" tabindex="0">X</p>
+						</div>
+						<p class="name">Tisha Santana</p>
+						<div class="modal_picture_container" oncontextmenu="return false;">
+							<img src="assets/tisha.jpg" alt="" class="modal_picture">
+						</div>
+						<p class="name">Consejera Rover</p>
+						<hr class="card_border">
+						<div class="card_info">
+							<h2>Información del puesto</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cupiditate accusantium nam labore impedit odit quis, debitis, sapiente unde illum reprehenderit quisquam autem. Dolores veniam, quos architecto at hic tempora.Ex aliquid facilis suscipit error minima illo temporibus nihil explicabo a eaque? Eos, impedit illum beatae hic odio magni ipsum eius maiores doloribus iure, vel. Voluptate illum, itaque minima ipsam.</p>
+						</div>
+					</figure>
+				</div>
+			</div>
 
 			<figure>
 				<p class="name">Patricia Eyssautier</p>
@@ -69,8 +131,28 @@
 					<img class="profile_picture" src="assets/patricia.jpg">
 				</div>
 				<p class="name">Subjefa de métodos educativos</p>
-				<div class="job_info" id="job_4" onclick="openCard(4)">Ver más</div>
+				<div class="job_info" tabindex="0" id="job_4" onclick="openCard(4)">Ver más</div>
 			</figure>
+
+			<div class="job images abajo" id="modal_job_4">
+				<div class="card">
+					<figure>
+						<div class="close_card">
+							<p id="close_card_btn_4" onclick="closeCard(4)" tabindex="0">X</p>
+						</div>
+						<p class="name">Patricia Eyssautier</p>
+						<div class="modal_picture_container" oncontextmenu="return false;">
+							<img src="assets/patricia.jpg" alt="" class="modal_picture">
+						</div>
+						<p class="name">Subjefa de métodos educativos</p>
+						<hr class="card_border">
+						<div class="card_info">
+							<h2>Información del puesto</h2>
+							<p>Es la responsable de vigilar que se aplique el Programa de Jóvenes en las secciones y de procurar el desarrollo de los adultos dentro del grupo scout.</p>
+						</div>
+					</figure>
+				</div>
+			</div>
 
 			<figure>
 				<p class="name">Elga Segovia</p>
@@ -78,8 +160,28 @@
 					<img class="profile_picture" src="assets/elga.jpg">
 				</div>
 				<p class="name">Subjefa de grupo administrativa</p>
-				<div class="job_info" id="job_5" onclick="openCard(5)">Ver más</div>
+				<div class="job_info" tabindex="0" id="job_5" onclick="openCard(5)">Ver más</div>
 			</figure>
+
+			<div class="job images abajo" id="modal_job_5">
+				<div class="card">
+					<figure>
+						<div class="close_card">
+							<p id="close_card_btn_5" onclick="closeCard(5)" tabindex="0">X</p>
+						</div>
+						<p class="name">Elga Segovia</p>
+						<div class="modal_picture_container" oncontextmenu="return false;">
+							<img src="assets/elga.jpg" alt="" class="modal_picture">
+						</div>
+						<p class="name">Subjefa de grupo administrativa</p>
+						<hr class="card_border">
+						<div class="card_info">
+							<h2>Información del puesto</h2>
+							<p>Es responsable de vigilar el cumplimiento en los ámbitos de administración de los recursos materiales y financieros del grupo scout.</p>
+						</div>
+					</figure>
+				</div>
+			</div>
 
 			<figure>
 				<p class="name">Claudia León</p>
@@ -87,140 +189,40 @@
 					<img class="profile_picture" src="assets/claudia.jpg">
 				</div>
 				<p class="name">Akela</p>
-				<div class="job_info" id="job_6" onclick="openCard(6)">Ver más</div>
+				<div class="job_info" tabindex="0" id="job_6" onclick="openCard(6)">Ver más</div>
 			</figure>
+
+			<div class="job images abajo" id="modal_job_6">
+				<div class="card">
+					<figure>
+						<div class="close_card">
+							<p id="close_card_btn_6" onclick="closeCard(6)" tabindex="0">X</p>
+						</div>
+						<p class="name">Claudia León</p>
+						<div class="modal_picture_container" oncontextmenu="return false;">
+							<img src="assets/claudia.jpg" alt="" class="modal_picture">
+						</div>
+						<p class="name">Akela</p>
+						<hr class="card_border">
+						<div class="card_info">
+							<h2>Información del puesto</h2>
+							<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Commodi eveniet beatae excepturi officia quasi veniam reprehenderit odit nisi saepe! Quo vel repellendus veniam possimus provident tempore exercitationem dolore ex aspernatur.Tempora asperiores veritatis earum soluta labore facilis eos amet dolore velit, ducimus cumque hic quidem, adipisci alias quo itaque rerum, quasi nemo iste, vel error. Perferendis nihil iure et inventore.</p>
+						</div>
+					</figure>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="job images abajo" id="modal_job_1">
-		<div class="card">
-			<figure>
-				<div class="close_card">
-					<p onclick="closeCard(1)">X</p>
-				</div>
-				<p class="name">Javier Vargas</p>
-				<div class="modal_picture_container" oncontextmenu="return false;">
-					<img src="assets/javier.jpg" alt="" class="modal_picture">
-				</div>
-				<p class="name">Jefe de grupo</p>
-				<hr class="card_border">
-				<div class="card_info">
-					<h2>Información del puesto</h2>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non doloremque eius eveniet dolore molestias perspiciatis placeat itaque minima nemo, mollitia repellendus aut laboriosam sunt incidunt, adipisci quisquam, dolores voluptatum aspernatur?Amet error fugiat nihil dolores repellendus eos ipsum vero maxime, quis eveniet doloribus minima, sapiente soluta minus quo magnam saepe odio excepturi deserunt reiciendis dolorem fugit. Ullam minima corrupti hic.</p>
-				</div>
-
-			</figure>
-		</div>
-	</div>
-
-	<div class="job images abajo" id="modal_job_2">
-		<div class="card">
-			<figure>
-				<div class="close_card">
-					<p onclick="closeCard(2)">X</p>
-				</div>
-				<p class="name">Daniel Popoca</p>
-				<div class="modal_picture_container" oncontextmenu="return false;">
-					<img src="assets/daniel.jpg" alt="" class="modal_picture">
-				</div>
-				<p class="name">Jefe de tropa scout</p>
-				<hr class="card_border">
-				<div class="card_info">
-					<h2>Información del puesto</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatibus dolorum eaque, suscipit aspernatur, eveniet, doloremque id optio consequuntur veniam, culpa ipsum rerum provident! Incidunt obcaecati, quos asperiores aut omnis.Voluptatem officiis explicabo repellat quasi facilis. Deserunt quae ex id, cum quo rerum, ab cumque aliquid harum doloribus modi omnis aperiam voluptatum rem eveniet repellendus, tempore! Voluptatum, voluptatibus odio suscipit?</p>
-				</div>
-			</figure>
-		</div>
-	</div>
-
-	<div class="job images abajo" id="modal_job_3">
-		<div class="card">
-			<figure>
-				<div class="close_card">
-					<p onclick="closeCard(3)">X</p>
-				</div>
-				<p class="name">Tisha Santana</p>
-				<div class="modal_picture_container" oncontextmenu="return false;">
-					<img src="assets/tisha.jpg" alt="" class="modal_picture">
-				</div>
-				<p class="name">Consejera Rover</p>
-				<hr class="card_border">
-				<div class="card_info">
-					<h2>Información del puesto</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio cupiditate accusantium nam labore impedit odit quis, debitis, sapiente unde illum reprehenderit quisquam autem. Dolores veniam, quos architecto at hic tempora.Ex aliquid facilis suscipit error minima illo temporibus nihil explicabo a eaque? Eos, impedit illum beatae hic odio magni ipsum eius maiores doloribus iure, vel. Voluptate illum, itaque minima ipsam.</p>
-				</div>
-			</figure>
-		</div>
-	</div>
-
-	<div class="job images abajo" id="modal_job_4">
-		<div class="card">
-			<figure>
-				<div class="close_card">
-					<p onclick="closeCard(4)">X</p>
-				</div>
-				<p class="name">Patricia Eyssautier</p>
-				<div class="modal_picture_container" oncontextmenu="return false;">
-					<img src="assets/patricia.jpg" alt="" class="modal_picture">
-				</div>
-				<p class="name">Subjefa de métodos educativos</p>
-				<hr class="card_border">
-				<div class="card_info">
-					<h2>Información del puesto</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Dolores sunt temporibus animi neque maxime tenetur dolorem aliquam amet, illum ducimus repellendus provident magnam, iste, reiciendis consequuntur debitis! Porro, doloremque, facere!Qui beatae eveniet, esse eligendi deleniti minus voluptate excepturi quam at molestiae quaerat amet tenetur. Maiores, culpa beatae obcaecati nobis officiis quis quo vero vitae quibusdam autem error rerum eligendi?</p>
-				</div>
-			</figure>
-		</div>
-	</div>
-
-	<div class="job images abajo" id="modal_job_5">
-		<div class="card">
-			<figure>
-				<div class="close_card">
-					<p onclick="closeCard(5)">X</p>
-				</div>
-				<p class="name">Elga Segovia</p>
-				<div class="modal_picture_container" oncontextmenu="return false;">
-					<img src="assets/elga.jpg" alt="" class="modal_picture">
-				</div>
-				<p class="name">Subjefa de grupo administrativa</p>
-				<hr class="card_border">
-				<div class="card_info">
-					<h2>Información del puesto</h2>
-					<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Commodi eveniet beatae excepturi officia quasi veniam reprehenderit odit nisi saepe! Quo vel repellendus veniam possimus provident tempore exercitationem dolore ex aspernatur.Tempora asperiores veritatis earum soluta labore facilis eos amet dolore velit, ducimus cumque hic quidem, adipisci alias quo itaque rerum, quasi nemo iste, vel error. Perferendis nihil iure et inventore.</p>
-				</div>
-			</figure>
-		</div>
-	</div>
-
-	<div class="job images abajo" id="modal_job_6">
-		<div class="card">
-			<figure>
-				<div class="close_card">
-					<p onclick="closeCard(6)">X</p>
-				</div>
-				<p class="name">Claudia León</p>
-				<div class="modal_picture_container" oncontextmenu="return false;">
-					<img src="assets/claudia.jpg" alt="" class="modal_picture">
-				</div>
-				<p class="name">Akela</p>
-				<hr class="card_border">
-				<div class="card_info">
-					<h2>Información del puesto</h2>
-					<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Commodi eveniet beatae excepturi officia quasi veniam reprehenderit odit nisi saepe! Quo vel repellendus veniam possimus provident tempore exercitationem dolore ex aspernatur.Tempora asperiores veritatis earum soluta labore facilis eos amet dolore velit, ducimus cumque hic quidem, adipisci alias quo itaque rerum, quasi nemo iste, vel error. Perferendis nihil iure et inventore.</p>
-				</div>
-			</figure>
-		</div>
-	</div>
 	<div class="fondo-job" id="fondo-job"></div>
 
 	<div class="aviso-cookies" id="aviso-cookies">
 		<img class="galleta" src="assets/cookie.svg" alt="Galleta">
 		<h3 class="titulo">Cookies</h3>
 		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
-		<button class="boton" id="btn-aceptar-cookies">Aceptar</button>
-		<button class="boton" id="btn-no_aceptar-cookies">No aceptar</button>
-		<a href="http://www.scouts28quiche.org/cookies.html">¿Para qué usamos las cookies?</a>
+		<button class="boton" tabindex="1" id="btn-aceptar-cookies">Aceptar</button>
+		<button class="boton" tabindex="1" id="btn-no_aceptar-cookies">No aceptar</button>
+		<a tabindex="1" href="http://www.scouts28quiche.org/cookies.html">¿Para qué usamos las cookies?</a>
 	</div>
 	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
 	<script src="js/second.js"></script>

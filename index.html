@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="gallery_scroll">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,11 @@
 <body>
 
 	<header>
-		<a href="http://www.scouts28quiche.org/index.html"><img src="assets/logo_header.png" class="header_logo"></a>
+		<a class="header_link_logo" href="http://www.scouts28quiche.org/index.html"><img src="assets/logo_header.png" class="header_logo"></a>
 		<div class="div_frase reveal-text">
 			<p class="frase">¡QUICHÉ SIEMPRE!... <br> ¡TRAS EL TRIUNFO!</p>
 		</div>
-		<svg focusable="true" onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
+		<svg tabindex="0" onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
   			<rect y="0" width="100" height="20" rx="8"></rect>
   			<rect y="30" width="100" height="20" rx="8"></rect>
   			<rect y="60" width="100" height="20" rx="8"></rect>
@@ -88,31 +88,138 @@
 				</div>
 			</div>
 		</div>
-		<div class="controls" id="left">
+		<div class="controls" id="left" tabindex="0">
 			<svg x="0px" y="0px" viewBox="0 0 330 330">
 				<path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
 			</svg>
 		</div>
-		<div class="controls" id="right">
+		<div class="controls" id="right" tabindex="0">
 			<svg x="0px" y="0px" viewBox="0 0 330 330">
 				<path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path>
 			</svg>
 		</div>
 	</div>
 
-	<ul class="sections">
-		<li id="imagen1" class="images izquierda"><a href="http://www.scouts28quiche.org/index.html"><img src="assets/lobatos.jpg" alt=""><p class="center">Inicio</p></a>
+	<div class="galeria_text">
+		<h1>Galería</h1>
+		<p>Da click a un logo para desplegar las fotos de su sección</p>
+	</div>
+
+	<ul class="sections" id="gallery_sections">
+		<li id="imagen1" onclick="showImg(1, this.id)" class="images izquierda filter_gallery" tabindex="0">
+			<img src="assets/lobatos.jpg" draggable="false" ondragstart="return false;" alt="">
 		</li>
-		<li id="imagen2" class="images arriba"><a href="http://www.scouts28quiche.org/sobre_las_secciones.html"><img src="assets/tropas_de_scouts.jpg" alt=""><p class="center">Sobre las secciones</p></a></li>
-		<li id="imagen3" class="images fondo"><a href="http://www.scouts28quiche.org/nuestros_jefes.html"><img src="assets/escudo.jpg" alt=""><p class="center">Nuestros jefes</p></a></li>
-		<li id="imagen4" class="images abajo"><a href="http://www.scouts28quiche.org/sobre_nosotros.html"><img src="assets/caminantes.jpg" alt=""><p class="center">Sobre nosotros</p></a></li>
-		<li id="imagen5" class="images derecha"><a href="http://www.scouts28quiche.org/contacto.html"><img src="assets/rovers.jpg" alt=""><p class="center">Contáctanos</p></a></li>
+
+		<li id="imagen2" onclick="showImg(2, this.id)" class="images arriba filter_gallery" tabindex="0">
+			<img src="assets/tropas_de_scouts.jpg" draggable="false" ondragstart="return false;" alt="">
+		</li>
+
+		<li id="imagen3" onclick="showImg(3, this.id)" class="images fondo filter_gallery" tabindex="0">
+			<img src="assets/escudo.jpg" draggable="false" ondragstart="return false;" alt="">
+		</li>
+
+		<li id="imagen4" onclick="showImg(4, this.id)" class="images abajo filter_gallery" tabindex="0">
+			<img src="assets/caminantes.jpg" draggable="false" ondragstart="return false;" alt="">
+		</li>
+
+		<li id="imagen5" onclick="showImg(5, this.id)" class="images derecha filter_gallery" tabindex="0">
+			<img src="assets/rovers.jpg" draggable="false" ondragstart="return false;" alt="">
+		</li>
+
+		<ul class="photoList abajo imagesList" id="photoList1">
+			<h2 class="galeria_title">Fotos de las manadas de lobatos:</h2>
+			<div class="photosContainer">
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+			</div>
+		</ul>
+
+		<ul class="photoList abajo imagesList" id="photoList2">
+			<h2 class="galeria_title">Fotos de las tropas de scouts:</h2>
+			<div class="photosContainer">
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="https://shorturl.at/ampvO" alt=""></li>
+			</div>
+		</ul>
+
+		<ul class="photoList abajo imagesList" id="photoList3">
+			<h2 class="galeria_title">Fotos de nuestros jefes:</h2>
+			<div class="photosContainer">
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+			</div>
+		</ul>
+
+		<ul class="photoList abajo imagesList" id="photoList4">
+			<h2 class="galeria_title">Fotos de la comunidades de caminantes:</h2>
+			<div class="photosContainer">
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="https://shorturl.at/bgrzL" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+			</div>
+		</ul>
+
+		<ul class="photoList abajo imagesList" id="photoList5">
+			<h2 class="galeria_title">Fotos de los clanes de rovers:</h2>
+			<div class="photosContainer">
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="https://shorturl.at/aoFNP" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+				<li><img src="" alt=""></li>
+			</div>
+		</ul>
 	</ul>
-	
+
+	<div class="aviso-cookies" id="aviso-cookies">
+		<img class="galleta" src="assets/cookie.svg" alt="Galleta">
+		<h3 class="titulo">Cookies</h3>
+		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
+		<button class="boton" tabindex="1" id="btn-aceptar-cookies">Aceptar</button>
+		<button class="boton" tabindex="1" id="btn-no_aceptar-cookies">No aceptar</button>
+		<a tabindex="1" href="http://www.scouts28quiche.org/cookies.html">¿Para qué usamos las cookies?</a>
+	</div>
+	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
 
 	<div class="video_responsive images fondo" id="video_pop-up">
 		<div class="video_pop-up activo">
-			<div class="close_video"><p id="close_video">X</p></div>
+			<div class="close_video"><p id="close_video" tabindex="1">X</p></div>
 			
 			<div class="video_container">
 				<video class="video" id="video" controls controlsList="nodownload" oncontextmenu="return false;">
@@ -125,15 +232,6 @@
 	</div>
 	<div class="fondo-video activo" id="fondo-video"></div>
 
-	<div class="aviso-cookies" id="aviso-cookies">
-		<img class="galleta" src="assets/cookie.svg" alt="Galleta">
-		<h3 class="titulo">Cookies</h3>
-		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
-		<button class="boton" id="btn-aceptar-cookies">Aceptar</button>
-		<button class="boton" id="btn-no_aceptar-cookies">No aceptar</button>
-		<a href="http://www.scouts28quiche.org/cookies.html">¿Para qué usamos las cookies?</a>
-	</div>
-	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
 	<script src="js/second.js"></script>
 
 	<footer>
