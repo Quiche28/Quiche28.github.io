@@ -17,18 +17,6 @@ const video = document.getElementById('video');
 const gallery_sections = document.getElementById('gallery_sections');
 
 const job_1 = document.getElementById('job_1');
-const job_2 = document.getElementById('job_2');
-const job_3 = document.getElementById('job_3');
-const job_4 = document.getElementById('job_4');
-const job_5 = document.getElementById('job_5');
-const job_6 = document.getElementById('job_6');
-
-const close_card_btn_1 = document.getElementById('close_card_btn_1');
-const close_card_btn_2 = document.getElementById('close_card_btn_2');
-const close_card_btn_3 = document.getElementById('close_card_btn_3');
-const close_card_btn_4 = document.getElementById('close_card_btn_4');
-const close_card_btn_5 = document.getElementById('close_card_btn_5');
-const close_card_btn_6 = document.getElementById('close_card_btn_6');
 
 const maps_google_iframe = document.getElementById('map_iframe');
 const maps_google_button = document.getElementById('map_button');
@@ -125,45 +113,15 @@ if (maps_option) {
 
 
 if (gallery_sections) {
-	var filter_gallery_izquierda = document.getElementsByClassName('filter_gallery izquierda');
-	var filter_gallery_arriba = document.getElementsByClassName('filter_gallery arriba');
-	var filter_gallery_fondo = document.getElementsByClassName('filter_gallery fondo');
-	var filter_gallery_abajo = document.getElementsByClassName('filter_gallery abajo');
-	var filter_gallery_derecha = document.getElementsByClassName('filter_gallery derecha');
+	var eachImage = document.querySelectorAll('.images');
 
-	filter_gallery_izquierda[0].addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			filter_gallery_izquierda[0].click();
-		}
-	});
-
-	filter_gallery_arriba[0].addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			filter_gallery_arriba[0].click();
-		}
-	});
-
-	filter_gallery_fondo[0].addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			filter_gallery_fondo[0].click();
-		}
-	});
-
-	filter_gallery_abajo[0].addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			filter_gallery_abajo[0].click();
-		}
-	});
-
-	filter_gallery_derecha[0].addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			filter_gallery_derecha[0].click();
-		}
+	eachImage.forEach(function(image, index) {
+		image.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				image.click();
+			}
+		});
 	});
 }
 
@@ -297,88 +255,26 @@ function openCard(number){
 }
 
 if (job_1) {
-	job_1.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			job_1.click();
-		}
+	var eachJob = document.querySelectorAll('.job_info');
+	var eachCard = document.querySelectorAll('.close_card_btn');
+	
+	eachJob.forEach(function(job, index) {
+		job.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				job.click();
+			}
+		});
 	});
 
-	job_2.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			job_2.click();
-		}
-	});
-
-	job_3.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			job_3.click();
-		}
-	});
-
-	job_4.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			job_4.click();
-		}
-	});
-
-	job_5.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			job_5.click();
-		}
-	});
-
-	job_6.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			job_6.click();
-		}
-	});
-
-	close_card_btn_1.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			close_card_btn_1.click();
-		}
-	});
-
-	close_card_btn_2.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			close_card_btn_2.click();
-		}
-	});
-
-	close_card_btn_3.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			close_card_btn_3.click();
-		}
-	});
-
-	close_card_btn_4.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			close_card_btn_4.click();
-		}
-	});
-
-	close_card_btn_5.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			close_card_btn_5.click();
-		}
-	});
-
-	close_card_btn_6.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			close_card_btn_6.click();
-		}
+	
+	eachCard.forEach(function(card, index) {
+		card.addEventListener("keyup", function(event) {
+			if (event.keyCode === 13) {
+				event.preventDefault();
+				card.click();
+			}
+		});
 	});
 }
 
