@@ -88,6 +88,7 @@ header ul {
   box-shadow: -1px 1px 10px rgb(0 0 0 / 25%);
   height: 100vh;
   width: 50vh;
+  max-width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -491,6 +492,10 @@ ul.menu_list li:nth-child(1) {
 	width: 30vh;
 	margin: 1vh;
 	object-fit: cover;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .photosContainer {
@@ -732,6 +737,14 @@ footer.absolute {
 	color: #E1306C;
 }
 
+.tiktok {
+	color: #000;
+}
+
+.twitter {
+	color: #1DA1F2;
+}
+
 .map {
 	margin: 0% 0 10% 0;
 	width: 100%;
@@ -791,14 +804,12 @@ iframe {
 }
 
 .chatbot_header {
+	position: relative;
 	background: #6699CC;
 	color: #fff;
 	padding: 4vh 4vh;
 	display: flex;
 	align-items: flex-start;
-	background-image: url(../assets/wave.svg);
-	background-repeat: no-repeat;
-	background-position-y: 7vh;
 	border-radius: 8px 8px 0 0;
 	height: calc(7vh + 39px);
 	width: 100.05%;
@@ -806,6 +817,13 @@ iframe {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.wave {
+	width: 100%;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
 }
 
 .chatbot_content.active_bot {
@@ -1008,6 +1026,7 @@ li::marker {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 1vh 0;
 }
 
 .modal_picture {
