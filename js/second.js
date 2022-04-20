@@ -135,7 +135,7 @@ function showImg(number, id){
 	showImgList.classList.toggle('visible_photos');
 	
 	if (showImgList.classList.contains("visible_photos")){
-		showImgList.scrollIntoView();
+		document.getElementById('view_imagesList').scrollIntoView();
 		let i = 1;
 		while (i <= 5){
 			var actualImgList = document.getElementById("photoList" + [i]);
