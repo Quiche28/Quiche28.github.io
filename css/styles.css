@@ -635,15 +635,7 @@ footer {
   transition: .8s ease;
 	background: #950000;
 	width: 100%;
-<<<<<<< HEAD
 	color: #fff;
-=======
-	color: #FFF;
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-direction: column;
->>>>>>> c297b71b6c7990ba40ac55d358317e90183a76eb
 }
 
 .Alex_logo {
