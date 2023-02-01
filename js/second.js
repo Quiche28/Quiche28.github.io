@@ -32,14 +32,13 @@ const questions_container = document.getElementById('questions');
 const bot_message = document.getElementById('bot_message');
 const bot_answer = document.getElementById('bot_answer');
 const back = document.getElementById('back');
-const questions = ["¿En qué horario se reúnen para actividades?", "¿A partir de qué edad pueden participar?", "¿Dónde se ubican?", "¿Qué necesito para inscribir a mi hijo/a a los Scouts?", "¿Cuál es la cuota anual y qué incluye?", "¿A qué edad me puedo unir a los Scouts?"];
-const answers = ["Nos reunimos todos los sábados a partir de las 4:00 hasta las 6:00 de la tarde", "A partir de los 7 los cumplidos", "Nos ubicamos en: 04870, C. 8 200, Espartaco, Coyoacán, Ciudad de México, CDMX", "Que su hijo/a asista a actividades tres sábados para que tome la decisión", "La cuota anual incluye seguro scout, derecho a participar en las actividades en el parque y a todas las actividades a nivel provincia y/o nacional, material para las actividades.", "Para ser muchacho/a debes tener entre 7 y 22 años cumplidos, si tienes más puedes participar como voluntario"];
+const questions = ["¿En qué horario se reúnen para actividades?", "¿Dónde se ubican?", "¿Qué necesito para inscribir a mi hijo/a a los Scouts?", "¿Cuál es la cuota anual y qué incluye?", "¿A qué edad me puedo unir a los Scouts?"];
+const answers = ["Nos reunimos todos los sábados a partir de las 4:00 hasta las 6:00 de la tarde", "Nos ubicamos en: 04870, C. 8 200, Espartaco, Coyoacán, Ciudad de México, CDMX", "Que su hijo/a asista a actividades tres sábados para que tome la decisión", "La cuota anual incluye seguro scout, derecho a participar en las actividades en el parque y a todas las actividades a nivel provincia y/o nacional, material para las actividades.", "Para ser muchacho/a debes tener entre 7 y 22 años cumplidos, si tienes más puedes participar como voluntario"];
+const cnt = document.querySelector('.cnt');
+var sectionIndex = 0;
+const cnt_sections = cnt.children.length;
 
-try {
-	const cnt = document.querySelector('.cnt');
-	var sectionIndex = 0;
-	const cnt_sections = cnt.children.length;
-
+if (cnt) {
 	left.addEventListener('click', () => {
 		sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : cnt_sections - 1;
 		cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
@@ -68,10 +67,6 @@ try {
 		sectionIndex = (sectionIndex < (cnt_sections - 1)) ? sectionIndex + 1 : 0;
 		cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
 	}, 8000);
-}
-
-catch (e) {
-	null
 }
 
 
@@ -167,28 +162,28 @@ menu_icon.addEventListener("keyup", function(event) {
 });
 
 
-try {
-	if(!localStorage.getItem('cookies-aceptadas')){
-		avisoCookies.classList.add('activo');
-		fondoAvisoCookies.classList.add('activo');
-	} 
-	else {
-		if (localStorage.getItem('cookies-aceptadas') === 'true'){
-			if (maps_google_button) {
-				maps_google_button.parentNode.removeChild(maps_google_button);
-			}
-		}
-		else if (localStorage.getItem('cookies-aceptadas') === 'false'){
-			if (maps_google_iframe) {
-				maps_google_iframe.parentNode.removeChild(maps_google_iframe);
-				if (footer_absolute){
-					footer_absolute.classList.add('absolute');
-				}
-			}
-
+if(!localStorage.getItem('cookies-aceptadas')){
+	avisoCookies.classList.add('activo');
+	fondoAvisoCookies.classList.add('activo');
+} 
+else {
+	if (localStorage.getItem('cookies-aceptadas') === 'true'){
+		if (maps_google_button) {
+			maps_google_button.parentNode.removeChild(maps_google_button);
 		}
 	}
+	else if (localStorage.getItem('cookies-aceptadas') === 'false'){
+		if (maps_google_iframe) {
+			maps_google_iframe.parentNode.removeChild(maps_google_iframe);
+			if (footer_absolute){
+				footer_absolute.classList.add('absolute');
+			}
+		}
 
+	}
+}
+
+if (botonAceptarCookies) {
 	botonAceptarCookies.addEventListener('click', () => {
 		avisoCookies.classList.remove('activo');
 		fondoAvisoCookies.classList.remove('activo');
@@ -210,10 +205,6 @@ try {
 	});
 
 	document.cookie = "cookies-aceptadas; SameSite = Strict; secure;"; 
-}
-
-catch (e) {
-	null
 }
 
 

@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es" class="gallery_scroll">
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-50YJGRX58R"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-50YJGRX58R');
+	</script>
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Inicio | Quiché</title>
@@ -13,15 +23,19 @@
 
 	<header>
 		<a class="header_link_logo" href="http://www.scouts28quiche.org/index.html"><img src="assets/logo_header.png" class="header_logo"></a>
-		<div class="div_frase reveal-text">
-			<p class="frase">¡QUICHÉ SIEMPRE!... <br> ¡TRAS EL TRIUNFO!</p>
-		</div>
 		<svg tabindex="0" onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
   			<rect y="0" width="100" height="20" rx="8"></rect>
   			<rect y="30" width="100" height="20" rx="8"></rect>
   			<rect y="60" width="100" height="20" rx="8"></rect>
 		</svg>
 		<ul id="menu" class="menu_list">
+			<li><a href="http://www.scouts28quiche.org/index.html">Inicio</a></li>
+			<li><a href="http://www.scouts28quiche.org/sobre_las_secciones.html">Sobre las secciones</a></li>
+			<li><a href="http://www.scouts28quiche.org/nuestros_jefes.html">Nuestros jefes</a></li>
+			<li><a href="http://www.scouts28quiche.org/sobre_nosotros.html">Sobre nosotros</a></li>
+			<li><a href="http://www.scouts28quiche.org/contacto.html">Contáctanos</a></li>
+		</ul>
+		<ul id="menu_list-no_mobile" class="menu_list-no_mobile">
 			<li><a href="http://www.scouts28quiche.org/index.html">Inicio</a></li>
 			<li><a href="http://www.scouts28quiche.org/sobre_las_secciones.html">Sobre las secciones</a></li>
 			<li><a href="http://www.scouts28quiche.org/nuestros_jefes.html">Nuestros jefes</a></li>
@@ -280,7 +294,12 @@
 	<script src="js/second.js"></script>
 
 	<footer>
-		<p>Quiché - <script src="js/date.js"></script> Copyright &copy;. Todos los derechos reservados</p>
+		<div class="div_frase reveal-text">
+			<p class="frase">¡QUICHÉ SIEMPRE!... <br> ¡TRAS EL TRIUNFO!</p>
+		</div>
+		<p class="copyright">Quiché - <script src="js/date.js"></script> Copyright &copy;. Todos los derechos reservados</p>
+		<p class="website_programer">Página web programada por:</p>
+		<a target="_blank" href="https://alexoterooficial.github.io/"><img class="Alex_logo" src="https://alexoterooficial.github.io/assets/Alex_Otero-Logo.png" alt=""></a>
 	</footer>
 
 </body>

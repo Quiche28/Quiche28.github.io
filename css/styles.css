@@ -79,11 +79,31 @@ header.sticky {
 	padding: 10px 2%;
 }
 
+@media (max-width: 413px){
+	header ul#menu.menu_list {
+		visibility: visible;
+		display: block;
+		opacity: 1;
+	}
+
+	svg#menu_icon.menu_icon {
+		visibility: visible;
+		display: block;
+		opacity: 1;
+	}
+
+	header ul#menu_list-no_mobile.menu_list-no_mobile {
+		visibility: hidden;
+		display: none;
+		opacity: 0;
+	}
+}
+
 header.sticky ul li a {
 	color: #FFF;
 }
 
-header ul {
+header ul.menu_list {
   background: #950000;
   box-shadow: -1px 1px 10px rgb(0 0 0 / 25%);
   height: 100vh;
@@ -98,6 +118,10 @@ header ul {
   top: 0;
   right: 0;
   z-index: 2;
+}
+
+.menu_list-no_mobile li {
+	margin: 0;
 }
 
 header ul li {
@@ -135,6 +159,13 @@ header ul li a:hover, header ul li a:focus {
 	padding: 0;
 }
 
+header ul.menu_list-no_mobile {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
 .header_logo {
 	height: 77px;
 	-moz-user-select: none;
@@ -149,6 +180,9 @@ header ul li a:hover, header ul li a:focus {
 	height: 6vh;
 	fill: #fff;
 	z-index: 3;
+	visibility: hidden;
+	display: none;
+	opacity: 0;
 }
 
 .menu_icon > rect {
@@ -592,16 +626,42 @@ p {
 }
 
 footer {
-	padding: 5% 0%;
-	text-align: left;
+	margin: 5vh 0 0 0;
+	padding: 2.5% 15%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: .8s ease;
 	background: #950000;
-	margin: 5% 0 0 0;  
 	width: 100%;
-	color: #FFF;
+	color: #fff;
 }
 
-footer > p {
-	margin: 0% 30%;
+.Alex_logo {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.copyright {
+  display: inline-block;
+  position: relative;
+}
+
+.copyright:after {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid #fff;
+  width: 80%;
+  transform: translateX(-50%);
+  bottom: -1.5vh;
+  left: 50%;
+}
+
+.website_programer {
+  margin: 3vh 0 0 0;
+  font-size: 118%;
 }
 
 footer.absolute {
@@ -610,18 +670,18 @@ footer.absolute {
 }
 
 .div_frase {
-	width: 63%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	text-align: left;
+	margin: 1% 0 1em 1em;
 }
 
 .frase {
-  margin: 0% 3% 0% 3%;
 	color: #fff;
   font-weight: bold;
   font-style: italic;
-  font-size: 3.5vh;
+  font-size: 150%;
   width: fit-content;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -948,6 +1008,7 @@ p.name {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	text-align: center;
 }
 
 .huge_card {

@@ -1,0 +1,9 @@
+2. Cambiar imágenes y nombres en "Nuestros jefes"
+5. Menú hamburguesa sólo en celulares
+6. Tratar de hacer estructura como página http://www.scouts284.org/
+7. Agregar cookies para video y pestaña al pie de la pantalla para volver a ver el video
+8. Google Search Console
+9. Google Analytics
+10. Actualizar usos de cookies en "Cookies"
+11. Hacer que el logo de "Sobre nosotros" sea redondo
+12. Hacer presentación como en "Casa Arcoíris"
