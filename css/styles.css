@@ -124,12 +124,8 @@ header ul.menu_list {
 	background: var(--main-color);
 	box-shadow: -1px 1px 10px rgb(0 0 0 / 25%);
 	height: 100vh;
-	width: 100%;
+	width: 70vw;
 	display: none;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-wrap: wrap;
-	flex-direction: column;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -705,7 +701,7 @@ p.tooltip-text.hidden {
 
 
 
-.element_hidden {
+.element_hidden, #close_menu {
 	display: none;
 	visibility: hidden;
 	opacity: 0;
@@ -1017,4 +1013,21 @@ footer {
 	100% {
 		transform: scaleX(0);
 	}
+}
+
+#close_menu {
+	transition: opacity 0.8s ease-in-out;
+}
+
+#close_menu.active {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 105vw;
+	height: 105vh;
+	background: rgba(0, 0, 0, 0.1);
+	display: block;
+	visibility: visible;
+	opacity: 1;
 }

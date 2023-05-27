@@ -4,8 +4,6 @@ const menu_icon = document.getElementById('menu_icon');
 const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu-link');
 
-const job_1 = document.getElementById('job_1');
-
 const bot_icon = document.getElementById('chatbot_icon');
 const bot_cnt = document.getElementById('chatbot_content');
 const tooltip = document.getElementById('tooltip');
@@ -18,6 +16,7 @@ const questions = ["¿En qué horario se reúnen para actividades?", "¿Dónde s
 const answers = ["Nos reunimos todos los sábados a partir de las 4:00 hasta las 6:00 de la tarde", "Nos ubicamos en: 04870, C. 8 200, Espartaco, Coyoacán, Ciudad de México, CDMX.", "Que su hijo/a asista a actividades tres sábados para que tome la decisión", "La cuota anual incluye seguro scout, derecho a participar en las actividades en el parque y a todas las actividades a nivel provincia y/o nacional, material para las actividades.", "Para ser muchacho/a debes tener entre 7 y 22 años cumplidos, si tienes más puedes participar como voluntario", "Puedes mandar un mensaje por WhatsApp al siguiente número y te responderemos con gusto: <a class='chatbot_phone' href='https://api.whatsapp.com/send?phone=525513638299&app'>5513638299</a>"];
 
 const copyright = document.querySelector('.copyright');
+const close_menu = document.getElementById('close_menu');
 
 const cargarImagen = (entradas, observador) => {
 	entradas.forEach((entrada) => {
@@ -58,10 +57,9 @@ links.forEach(link => {
 
 menuLinks.forEach(link => {
 	link.addEventListener('click', () => {
-	  const menu = document.getElementById('menu');
-	  const menuIcon = document.getElementById('menu_icon');
-	  menu.classList.remove('active_menu');
-	  menuIcon.classList.remove('cross');
+	  	menu.classList.remove('active_menu');
+	  	menu_icon.classList.remove('cross');
+		close_menu.classList.remove('active');
 	});
 });
 
@@ -158,6 +156,7 @@ window.addEventListener('resize', handleWindowResize);
 function menu_icon_pressed() {
 	menu.classList.toggle('active_menu');
 	menu_icon.classList.toggle('cross');
+	close_menu.classList.toggle('active');
 	if (bot_cnt && bot_icon) {
 		bot_icon.classList.remove('active_bot');
 		bot_cnt.classList.remove('active_bot');
@@ -175,25 +174,22 @@ menu_icon.addEventListener('click', () => {
 	menu_icon_pressed();
 });
 
-if (bot_cnt && bot_icon) {
+bot_icon.addEventListener("keyup", function(event) {
+	if (event.key === 'Enter') {
+		event.preventDefault();
+		bot_icon.click();
+	}
+});
 
-	bot_icon.addEventListener("keyup", function(event) {
-		if (event.key === 'Enter') {
-			event.preventDefault();
-			bot_icon.click();
-		}
-	});
+bot_icon.addEventListener('click', () => {
+	if(!tooltip.classList.contains('hidden')){
+		tooltip.classList.add('hidden');
+	}
+	bot_icon.classList.toggle('active_bot');
+	bot_cnt.classList.toggle('active_bot');
+});
 
-	bot_icon.addEventListener('click', () => {
-		if(!tooltip.classList.contains('hidden')){
-			tooltip.classList.add('hidden');
-		}
-		bot_icon.classList.toggle('active_bot');
-		bot_cnt.classList.toggle('active_bot');
-	});
-
-	reset_questions();
-}
+reset_questions();
 
 function question_answer(number, id) {
 
@@ -223,19 +219,16 @@ function question_answer(number, id) {
 	}
 }
 
-if (back) {
+back.addEventListener("keyup", function(event) {
+	if (event.key === 'Enter') {
+		event.preventDefault();
+		back.click();
+	}
+});
 
-	back.addEventListener("keyup", function(event) {
-		if (event.key === 'Enter') {
-			event.preventDefault();
-			back.click();
-		}
-	});
-
-	back.addEventListener('click', () => {
-		reset_questions();
-	});
-}
+back.addEventListener('click', () => {
+	reset_questions();
+});
 
 function reset_questions() {
 	let n = 0;
@@ -260,7 +253,7 @@ function reset_questions() {
 		question_element.setAttribute("tabindex", "0");
 
 		question_element.addEventListener("keyup", function(event) {
-			if (event.keyCode === 13) {
+			if (event.key === 'Enter') {
 				event.preventDefault();
 				question_element.click();
 			}
@@ -283,4 +276,8 @@ var swiper = new Swiper('.scouts-slider', {
 	  el: '.scouts-slider__pagination',
 	  clickable: true,
 	}
+});
+
+close_menu.addEventListener('click', () => {
+	menu_icon_pressed();
 });
