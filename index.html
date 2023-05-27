@@ -14,293 +14,259 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Inicio | Quiché</title>
-	<link rel="shortcut icon" type="image/x-icon" href="assets\Logo.jpg">
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/main.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="https://scouts28quiche.org/assets\Logo.jpg">
+	<script src="https://scouts28quiche.org/js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+	<link rel="stylesheet" href="https://scouts28quiche.org/css/styles.css">
 </head>
 <body>
 
-	<header>
-		<a class="header_link_logo" href="http://www.scouts28quiche.org/index.html"><img src="assets/logo_header.png" class="header_logo"></a>
-		<svg tabindex="0" onclick="menu_f()" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
+	<header id="header-intro">
+		<a class="header_link_logo header-link" href="#Inicio"><img src="https://scouts28quiche.org/assets/logo_header.png" class="header_logo"></a>
+		<svg tabindex="0" id="menu_icon" class="menu_icon" viewBox="0 0 100 80" width="40" height="40">
   			<rect y="0" width="100" height="20" rx="8"></rect>
   			<rect y="30" width="100" height="20" rx="8"></rect>
   			<rect y="60" width="100" height="20" rx="8"></rect>
 		</svg>
 		<ul id="menu" class="menu_list">
-			<li><a href="http://www.scouts28quiche.org/index.html">Inicio</a></li>
-			<li><a href="http://www.scouts28quiche.org/sobre_las_secciones.html">Sobre las secciones</a></li>
-			<li><a href="http://www.scouts28quiche.org/nuestros_jefes.html">Nuestros jefes</a></li>
-			<li><a href="http://www.scouts28quiche.org/sobre_nosotros.html">Sobre nosotros</a></li>
-			<li><a href="http://www.scouts28quiche.org/contacto.html">Contáctanos</a></li>
+			<li><a class="header-link menu-link" href="#Inicio">Inicio</a></li>
+			<li><a class="header-link menu-link" href="#Quienes_somos">¿Quiénes somos?</a></li>
+			<li><a class="header-link menu-link" href="#Como_funciona">¿Cómo funciona?</a></li>
+			<li><a class="header-link menu-link" href="#Jefes">Jefes</a></li>
+			<li><a class="header-link menu-link" href="#Donde_estamos">¿Dónde estamos?</a></li>
+			<li class="sm-btns">
+				<a class="header-link icon-header" target="_blank" href="https://api.whatsapp.com/send?phone=525513638299&app"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+				<a class="header-link icon-header fb" target="_blank" href="https://www.facebook.com/28Quiche"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+			</li>
 		</ul>
 		<ul id="menu_list-no_mobile" class="menu_list-no_mobile">
-			<li><a href="http://www.scouts28quiche.org/index.html">Inicio</a></li>
-			<li><a href="http://www.scouts28quiche.org/sobre_las_secciones.html">Sobre las secciones</a></li>
-			<li><a href="http://www.scouts28quiche.org/nuestros_jefes.html">Nuestros jefes</a></li>
-			<li><a href="http://www.scouts28quiche.org/sobre_nosotros.html">Sobre nosotros</a></li>
-			<li><a href="http://www.scouts28quiche.org/contacto.html">Contáctanos</a></li>
+			<li><a class="header-link" href="#Inicio">Inicio</a></li>
+			<li><a class="header-link" href="#Quienes_somos">¿Quiénes somos?</a></li>
+			<li><a class="header-link" href="#Como_funciona">¿Cómo funciona?</a></li>
+			<li><a class="header-link" href="#Jefes">Jefes</a></li>
+			<li><a class="header-link" href="#Donde_estamos">¿Dónde estamos?</a></li>
+			<li class="sm-btns">
+				<a class="header-link icon-header" target="_blank" href="https://api.whatsapp.com/send?phone=525513638299&app"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+				<a class="header-link icon-header fb" target="_blank" href="https://www.facebook.com/28Quiche"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+			</li>
 		</ul>
 	</header>
 	
-	<div class="slider_container">
-		<div class="cnt">
-			<div class="slider_content" id="slider_1">
-				<div class="image_text">
-					<div class="slider_image">	
-						<img src="assets/1.jpg" alt="">
-					</div>
-					<div class="slider_text">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad reiciendis molestiae delectus omnis molestias, quaerat quis recusandae rerum esse, aut, odit natus ab. Ipsa nihil illum aliquid ducimus sapiente?
-						Eligendi adipisci odio voluptatem dolor excepturi reprehenderit, ducimus perferendis saepe laboriosam quae accusamus quam numquam nobis sequi nisi illo maxime facere ad consequuntur magni incidunt minus officiis sapiente nihil. Praesentium.</p>
-					</div>
-				</div>
+	<div class="intro" id="Inicio">
+		<h1 id="intro-h1">Scouts 28 Quiché</h1>
+		
+		<div class="carousel">
+			<div class="carousel-inner">
+			  <img src="" draggable="false" ondragstart="return false;"/>
 			</div>
-			<div class="slider_content" id="slider_2">
-				<div class="image_text">
-					<div class="slider_image">	
-						<img src="assets/2.jpg" alt="">
-					</div>
-					<div class="slider_text">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad reiciendis molestiae delectus omnis molestias, quaerat quis recusandae rerum esse, aut, odit natus ab. Ipsa nihil illum aliquid ducimus sapiente?
-						Eligendi adipisci odio voluptatem dolor excepturi reprehenderit, ducimus perferendis saepe laboriosam quae accusamus quam numquam nobis sequi nisi illo maxime facere ad consequuntur magni incidunt minus officiis sapiente nihil. Praesentium.</p>
-					</div>
-				</div>
-			</div>
-			<div class="slider_content" id="slider_3">
-				<div class="image_text">
-					<div class="slider_image">	
-						<img src="assets/3.jpg" alt="">
-					</div>
-					<div class="slider_text">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad reiciendis molestiae delectus omnis molestias, quaerat quis recusandae rerum esse, aut, odit natus ab. Ipsa nihil illum aliquid ducimus sapiente?
-						Eligendi adipisci odio voluptatem dolor excepturi reprehenderit, ducimus perferendis saepe laboriosam quae accusamus quam numquam nobis sequi nisi illo maxime facere ad consequuntur magni incidunt minus officiis sapiente nihil. Praesentium.</p>
-					</div>
-				</div>
-			</div>
-			<div class="slider_content" id="slider_4">
-				<div class="image_text">
-					<div class="slider_image">	
-						<img src="assets/4.jpg" alt="">
-					</div>
-					<div class="slider_text">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad reiciendis molestiae delectus omnis molestias, quaerat quis recusandae rerum esse, aut, odit natus ab. Ipsa nihil illum aliquid ducimus sapiente?
-						Eligendi adipisci odio voluptatem dolor excepturi reprehenderit, ducimus perferendis saepe laboriosam quae accusamus quam numquam nobis sequi nisi illo maxime facere ad consequuntur magni incidunt minus officiis sapiente nihil. Praesentium.</p>
-					</div>
-				</div>
-			</div>
-			<div class="slider_content" id="slider_5">
-				<div class="image_text">
-					<div class="slider_image">	
-						<img src="assets/5.jpg" alt="">
-					</div>
-					<div class="slider_text">
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat ad reiciendis molestiae delectus omnis molestias, quaerat quis recusandae rerum esse, aut, odit natus ab. Ipsa nihil illum aliquid ducimus sapiente?
-						Eligendi adipisci odio voluptatem dolor excepturi reprehenderit, ducimus perferendis saepe laboriosam quae accusamus quam numquam nobis sequi nisi illo maxime facere ad consequuntur magni incidunt minus officiis sapiente nihil. Praesentium.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="controls" id="left" tabindex="0">
-			<svg x="0px" y="0px" viewBox="0 0 330 330">
-				<path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"/>
-			</svg>
-		</div>
-		<div class="controls" id="right" tabindex="0">
-			<svg x="0px" y="0px" viewBox="0 0 330 330">
-				<path d="M325.606,229.393l-150.004-150C172.79,76.58,168.974,75,164.996,75c-3.979,0-7.794,1.581-10.607,4.394  l-149.996,150c-5.858,5.858-5.858,15.355,0,21.213c5.857,5.857,15.355,5.858,21.213,0l139.39-139.393l139.397,139.393  C307.322,253.536,311.161,255,315,255c3.839,0,7.678-1.464,10.607-4.394C331.464,244.748,331.464,235.251,325.606,229.393z"></path>
-			</svg>
 		</div>
 	</div>
 
-	<div class="galeria_text">
-		<h1>Galería</h1>
-		<p>Da click a un logo para desplegar las fotos de su sección</p>
-	</div>
+	<div id="Quienes_somos" class="section_info contains_side-img">
+		<div>
+			<h2>¿Quiénes somos?</h2>
 
-	<ul class="sections" id="gallery_sections">
-		<li id="imagen1" onclick="showImg(1, this.id)" class="images izquierda filter_gallery" tabindex="0">
-			<img src="assets/lobatos.jpg" oncontextmenu="return false;" draggable="false" ondragstart="return false;" alt="">
-		</li>
+			<p>Somos parte de una organización llamada Scouts de México. Nuestro objetivo es ayudar a los niños y jóvenes a crecer y desarrollarse de una manera especial. No lo hacemos en una escuela tradicional, sino de una manera divertida y diferente.</p>
 
-		<li id="imagen2" onclick="showImg(2, this.id)" class="images arriba filter_gallery" tabindex="0">
-			<img src="assets/tropas_de_scouts.jpg" oncontextmenu="return false;" draggable="false" ondragstart="return false;" alt="">
-		</li>
-
-		<li id="imagen3" onclick="showImg(3, this.id)" class="images fondo filter_gallery" tabindex="0">
-			<img src="assets/escudo.jpg" oncontextmenu="return false;" draggable="false" ondragstart="return false;" alt="">
-		</li>
-
-		<li id="imagen4" onclick="showImg(4, this.id)" class="images abajo filter_gallery" tabindex="0">
-			<img src="assets/caminantes.jpg" oncontextmenu="return false;" draggable="false" ondragstart="return false;" alt="">
-		</li>
-
-		<li id="imagen5" onclick="showImg(5, this.id)" class="images derecha filter_gallery" tabindex="0">
-			<img src="assets/rovers.jpg" oncontextmenu="return false;" draggable="false" ondragstart="return false;" alt="">
-		</li>
-
-		<div id="view_imagesList"></div>
-
-		<ul class="photoList abajo imagesList" id="photoList1">
-			<h2 class="galeria_title">Fotos de las manadas de lobatos:</h2>
-			<div class="photosContainer">
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-			</div>
-		</ul>
-
-		<ul class="photoList abajo imagesList" id="photoList2">
-			<h2 class="galeria_title">Fotos de las tropas de scouts:</h2>
-			<div class="photosContainer">
-				<li><img src="assets/tropas_de_scouts_1.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_2.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_3.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_4.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_5.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_6.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_7.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_8.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_9.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_10.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_11.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_12.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_13.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_14.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_15.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_16.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_17.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_18.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_19.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_20.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_21.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_22.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_23.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_24.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_25.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_26.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_27.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_28.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_29.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_30.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_31.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_32.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_33.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_34.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_35.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_36.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_37.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_38.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_39.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_40.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_41.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_42.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_43.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_44.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_45.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_46.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_47.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_48.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_49.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_50.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_51.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_52.jpeg" alt=""></li>
-				<li><img src="assets/tropas_de_scouts_53.jpeg" alt=""></li>
-			</div>
-		</ul>
-
-		<ul class="photoList abajo imagesList" id="photoList3">
-			<h2 class="galeria_title">Fotos de nuestros viajes:</h2>
-			<div class="photosContainer">
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-			</div>
-		</ul>
-
-		<ul class="photoList abajo imagesList" id="photoList4">
-			<h2 class="galeria_title">Fotos de la comunidades de caminantes:</h2>
-			<div class="photosContainer">
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-			</div>
-		</ul>
-
-		<ul class="photoList abajo imagesList" id="photoList5">
-			<h2 class="galeria_title">Fotos de los clanes de rovers:</h2>
-			<div class="photosContainer">
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-				<li><img src="" alt=""></li>
-			</div>
-		</ul>
-	</ul>
-
-	<div class="aviso-cookies" id="aviso-cookies">
-		<img class="galleta" src="assets/cookie.svg" alt="Galleta">
-		<h3 class="titulo">Cookies</h3>
-		<p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.</p>
-		<button class="boton" tabindex="1" id="btn-aceptar-cookies">Aceptar</button>
-		<button class="boton" tabindex="1" id="btn-no_aceptar-cookies">No aceptar</button>
-		<a tabindex="1" href="http://www.scouts28quiche.org/cookies.html">¿Para qué usamos las cookies?</a>
-	</div>
-	<div class="fondo-aviso-cookies" id="fondo-aviso-cookies"></div>
-
-	<div class="video_responsive images fondo" id="video_pop-up">
-		<div class="video_pop-up activo">
-			<div class="close_video"><p id="close_video" tabindex="1">X</p></div>
+			<p>En los Scouts, aprendemos cosas importantes mientras nos divertimos al aire libre. Pasamos tiempo en la naturaleza, explorando y aprendiendo sobre el mundo que nos rodea. También participamos en actividades en nuestra comunidad y aprendemos sobre la cultura y los valores importantes.</p>
 			
-			<div class="video_container">
-				<video class="video" id="video" controls controlsList="nodownload" oncontextmenu="return false;">
-					<source src="assets/Asociacion_Scout.mp4" type="video/mp4">
-					<source src="assets/Asociacion_Scout.webm" type="video/webm">
-					Su navegador no soporta la etiqueta de vídeo.
-				</video>
+			<p>Tenemos un plan llamado "Proyecto Educativo" que nos guía y nos dice qué cosas debemos aprender y cómo hacerlo. Este plan nos ayuda a tomar decisiones y nos enseña cómo ser mejores personas.</p>
+			
+			<p>El programa de jóvenes es una parte importante de los Scouts. Es donde encontramos muchas oportunidades para aprender cosas nuevas. Participamos en diferentes actividades, proyectos y recibimos insignias por nuestros logros. A través de todo esto, aprendemos los valores que son importantes en los Scouts, como ser honestos, amables y valientes.</p>
+			
+			<p><b>En resumen</b>, en los Scouts de México, nos divertimos mientras aprendemos sobre la naturaleza, la comunidad y los valores importantes. Tenemos un plan que nos guía y un programa especial para jóvenes donde podemos aprender y crecer juntos.</p>
+
+			<p>Pero... ¿Cómo funciona?</p>
+		</div>
+
+		<img src="https://scouts28quiche.org/assets/scouts_logo.png" class="images fondo side_img" id="imagen1" draggable="false" ondragstart="return false;">
+	</div>
+
+	<div id="Como_funciona" class="section_info">
+		<div class="arrow">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+				<path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+			</svg>
+		</div>
+		<h2>¿Cómo funciona?</h2>
+
+		<p>En los Scouts nos organizamos en diferentes grupos llamados secciones. Cada sección está formada por niños y niñas de edades específicas. En cada sección, tenemos un jefe que nos guía y se encarga de planificar actividades divertidas y educativas para nosotros.</p>
+
+		<p>Las secciones en los Scouts son:</p>
+
+		<div class="contains_side-img margin_section">
+			<div>
+				<h3>Manda de lobatos:</h3>
+
+				<p>Las manadas de lobatos son grupos de niños y niñas que se dividen en seisenas, que son como equipos de colores. Cada niño tiene un nombre de selva, como el nombre de un animal o algo del libro de la selva, que representa su personalidad. Las manadas de lobatos son para niños y niñas de 7 a 11 años y es una forma divertida de comenzar a ser Scouts.</p>
+
+				<p>Ahora, ¿sabes qué son las seisenas? Las seisenas son grupos que están hechos por seis miembros. Los miembros de las seisenas trabajan juntos como un equipo, se apoyan mutuamente y participan en actividades divertidas. Es como tener un grupo de amigos dentro de la manada en el que podemos confiar y compartir experiencias emocionantes.</p>
+
+				<p>En las manadas de lobatos, usamos el tema del "Libro de la Selva" de Rudyard Kipling. Jugamos y aprendemos cosas nuevas. Aprendemos a tomar decisiones y a ser líderes en nuestro grupo. También salimos de aventuras a lugares emocionantes y educativos.</p>
+					
+				<p>En las manadas de lobatos, aprendemos cosas importantes como hacer nudos y usar claves secretas. Estas habilidades nos ayudan cuando vamos de campamento y nos enfrentamos a desafíos. Es un lugar donde nos divertimos mucho y aprendemos cosas útiles para la vida.</p>
+			</div>
+
+			<img id="imagen2" class="images derecha side_img" src="https://scouts28quiche.org/assets/lobatos_vertical.png">
+		</div>
+
+		<div class="contains_side-img margin_section">
+			<div>
+				<h3>Tropa Scouts</h3>
+				<p>En la tropa, seguimos aprendiendo sobre el escultismo y trabajamos en proyectos interesantes. Aquí es donde desarrollamos aún más nuestras habilidades de liderazgo. A diferencia de la manada, en la tropa nos dividimos en patrullas y cada patrulla tiene un nombre de animal. La tropa es para adolescentes de 11 a 15 años.</p>
+
+				<p>En la patrulla, tenemos a un guía y un subguía que son los líderes de nuestro grupo. Ellos se encargan de mantener el orden y ayudarnos a trabajar juntos como un equipo. En la tropa, los adolescentes como nosotros participamos en actividades emocionantes, pero también aprendemos a debatir y discutir de manera respetuosa. Aprendemos a apoyar y ayudar a las personas que nos rodean.</p>
+
+				<p>Un ejemplo de cómo aprendemos a expresar nuestras ideas y opiniones es a través de los foros provinciales. Estos son eventos que ocurren una vez al año y nos dan la oportunidad de compartir lo que queremos cambiar, mejorar o agregar en nuestras actividades y proyectos.</p>
+
+				<p><b>En resumen</b>, en la tropa seguimos aprendiendo y creciendo, trabajamos en equipo, desarrollamos nuestras habilidades de liderazgo y aprendemos a expresar nuestras ideas para hacer del escultismo una experiencia aún más increíble.</p>
+			</div>
+			<img id="imagen3" class="images izquierda side_img" src="https://scouts28quiche.org/assets/tropas_de_scouts_vertical.png">
+		</div>
+
+		<div class="contains_side-img margin_section">
+			<div>
+				<h3>Comunidad de Caminantes</h3>
+				<p>La comunidad es una sección especial donde seguimos aprendiendo y reforzando todo lo que hemos aprendido en la tropa y la manada. Aquí tenemos más independencia y podemos tomar decisiones sobre las actividades que queremos hacer. En la comunidad, nos dividimos en equipos y cada equipo tiene un coordinador y un subcoordinador llamados caminantes. La comunidad es para adolescentes de 15 a 18 años.</p>
+
+				<p>En la comunidad, empezamos a tener más libertad y responsabilidad. A diferencia de la tropa, los equipos en la comunidad tienen nombres de personas famosas. Para elegir el nombre de una persona famosa, la persona famosa debe de cumplir al menos con dos leyes de la "Ley Scout", las cuales son reglas importantes que seguimos para ser buenas personas y ciudadanos.</p>
+
+				<p>En la comunidad, nosotros, los jóvenes, decidimos qué actividades hacer y cómo llevarlas a cabo. Tenemos algo llamado "Red de Caminantes", donde los jefes ya no están tan involucrados en nuestras decisiones y movimiento. Aquí aprendemos a trabajar en equipo, a tomar decisiones importantes y a ser aún más independientes.</p>
+
+				<p><b>En resumen</b>, la comunidad es una sección especial donde seguimos aprendiendo y creciendo. Tenemos la oportunidad de elegir nuestras propias actividades y desarrollar aún más nuestras habilidades de liderazgo. Es un lugar emocionante donde nosotros, los jóvenes, tomamos la iniciativa y trabajamos juntos para hacer del escultismo una experiencia única.</p>
+			</div>
+			<img id="imagen4" class="images abajo side_img"  src="https://scouts28quiche.org/assets/caminantes_vertical.png">
+		</div>
+
+		<div class="contains_side-img">
+			<div>
+				<h3>Clan de Rovers</h3>
+				<p>El Clan de Rovers es una parte especial de los Scouts. Los Rovers son scouts mayores de entre 18 y 22 años. Su misión principal es ayudar a la comunidad y a otros grupos de scouts. Son como los "hermanos mayores" de los scouts más jóvenes.</p>
+
+				<p>Los Rovers trabajan juntos en actividades y proyectos que benefician a la comunidad. Pueden limpiar parques, organizar eventos para recaudar fondos o ayudar a organizaciones benéficas. También comparten su experiencia y enseñan a otros scouts.</p>
+
+				<p>Son considerados los "frutos" del escultismo, ya que han aprendido muchas habilidades y valores importantes durante su tiempo como scouts. Ahora tienen la oportunidad de utilizar esas habilidades para marcar la diferencia en la comunidad y en la vida de otras personas.</p>
+
+				<p>En resumen, el Clan de Rovers es una etapa especial en el escultismo donde los scouts mayores trabajan juntos para hacer el bien y ayudar a otros. Son como líderes y modelos a seguir para los scouts más jóvenes, y utilizan sus habilidades y valores para marcar una diferencia positiva en la sociedad.</p>
+			</div>
+			<img id="imagen5" class="images arriba side_img" src="https://scouts28quiche.org/assets/rovers_vertical.png">
+		</div>
+
+		<p>Todas las secciones tienen jefes, pero ¿Qué son los jefes?</p>
+	</div>
+
+	<div id="Jefes" class="section_info">
+		<h2>Jefes</h2>
+		<p>Los jefes Scouts son personas que tienen un papel especial dentro de los grupos Scouts. Son como los líderes o representantes del grupo y se encargan de cuidar y guiar a los demás miembros. Su trabajo consiste en asegurarse de que se sigan las reglas y programas del grupo, ayudar a los niños y jóvenes a crecer y aprender cosas nuevas, y también planificar actividades y tareas importantes para el grupo. Los jefes Scouts son como los guías del grupo, y están ahí para enseñar, apoyar y motivar a todos los demás miembros a ser los mejores Scouts que puedan ser.</p>
+
+		<p>Nuestros jefes son:</p>
+		
+		<div class="scouts-slider">
+			<div class="scouts-slider__wrp swiper-wrapper">
+		  
+			  <div class="scouts-slider__item swiper-slide">
+				<div class="scouts-slider__img">
+				  <img src="https://scouts28quiche.org/assets/javier.jpg">
+				</div>
+				<div class="scouts-slider__content">
+				  <div class="scouts-slider__title">Javier Vargas</div>
+				  <span class="scouts-slider__code">Jefe de grupo</span>
+				  <div class="scouts-slider__text">Es el representante del grupo y está a cargo de dos grupos importantes: el Consejo y el Comité de Grupo. Su responsabilidad principal es asegurarse de que se cumplan las reglas del Programa de Jóvenes en todas las secciones del grupo. Además, brinda apoyo a los adultos del grupo para su crecimiento y aprendizaje, y se encarga de cumplir con un Plan de Trabajo importante que está vinculado al plan de trabajo de la Provincia.</div>
+				</div>
+			  </div>
+			  
+			  <div class="scouts-slider__item swiper-slide">
+				<div class="scouts-slider__img">
+				  <img src="https://scouts28quiche.org/assets/elga.jpg">
+				</div>
+				<div class="scouts-slider__content">
+					<div class="scouts-slider__title">Elga Segovia</div>
+					<span class="scouts-slider__code">Subjefa de grupo administrativa</span>
+				  	<div class="scouts-slider__text">Es responsable de cuidar y administrar los recursos del grupo Scout, como el dinero y las cosas que se necesitan. Se asegura de que todo esté en orden y de que se utilicen de manera adecuada. Esto significa que se preocupa por el dinero y los materiales del grupo, y se asegura de que se usen de la mejor manera posible. También puede ayudar a hacer planes y tomar decisiones sobre cómo usar los recursos de manera sabia.</div>
+				</div>
+			  </div>
+			  
+			  <div class="scouts-slider__item swiper-slide">
+				<div class="scouts-slider__img">
+				  <img src="https://scouts28quiche.org/assets/tisha.jpg" alt="">
+				</div>
+				<div class="scouts-slider__content">
+					<div class="scouts-slider__title">Tisha Santana</div>
+					<span class="scouts-slider__code">Consejera Rover</span>
+				  	<div class="scouts-slider__text">El Consejero Responsable es un adulto que está allí para ayudarnos a crecer, aprender y guiarnos en nuestro camino. Nos brindan orientación y apoyo mientras evaluamos nuestras metas y progresamos. Puede haber más de un consejero, pero siempre están allí para cuidarnos y asegurarse de que estemos creciendo de la mejor manera posible.</div>
+				</div>
+			  </div>
+
+			  <div class="scouts-slider__item swiper-slide">
+				<div class="scouts-slider__img">
+				  <img src="https://scouts28quiche.org/assets/daniel.jpg" alt="">
+				</div>
+				<div class="scouts-slider__content">
+					<div class="scouts-slider__title">Daniel Popoca</div>
+					<span class="scouts-slider__code">Jefe de tropa scout</span>
+				  	<div class="scouts-slider__text">Jefe Scout muy divertido que nos guía y nos enseña sobre lugares nuevos y emocionantes. Nos ayuda a explorar y descubrir cosas interesantes en compañía de nuevos amigos. ¡Vamos a divertirnos mucho mientras exploramos juntos!</div>
+				</div>
+			  </div>
+
+			  <div class="scouts-slider__item swiper-slide">
+				<div class="scouts-slider__img">
+				  <img src="https://scouts28quiche.org/assets/lobatos_profile.jpg" alt="">
+				</div>
+				<div class="scouts-slider__content">
+					<div class="scouts-slider__title">Victor Delgado</div>
+					<span class="scouts-slider__code">Akela</span>
+				  	<div class="scouts-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+				</div>
+			  </div>
+			  
+			</div>
+			<div class="scouts-slider__pagination"></div>
+		</div>
+	</div>
+
+	<div id="Donde_estamos" class="section_info">
+		<h2>¿Dónde estamos?</h2>
+		<p>Todo esto suena muy divertido, ¿verdad? Pero, ¿te has preguntado dónde nos divertimos tanto? Bueno, nosotros nos reunimos cada sábado a las 4 de la tarde en el siguiente parque:</p>
+
+		<iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1776.931731249361!2d-99.13186534495416!3d19.31767778771282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce01b817f413d7%3A0xab708823d909e7f9!2sAlthea%20Park!5e0!3m2!1sen!2smx!4v1640136961898!5m2!1sen!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" tabindex="-1"></iframe>
+
+		<p id="tooltip" class="tooltip-text">¿Tienes alguna duda? ¡Yo te puedo ayudar!</p>
+		<div class="chatbot">
+			<div class="chatbot_icon" tabindex="0" id="chatbot_icon">
+				<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 122.88 119.35">
+					<path fill="#6699CC" d="M57.49,29.2V23.53a14.41,14.41,0,0,1-2-.93A12.18,12.18,0,0,1,50.44,7.5a12.39,12.39,0,0,1,2.64-3.95A12.21,12.21,0,0,1,57,.92,12,12,0,0,1,61.66,0,12.14,12.14,0,0,1,72.88,7.5a12.14,12.14,0,0,1,0,9.27,12.08,12.08,0,0,1-2.64,3.94l-.06.06a12.74,12.74,0,0,1-2.36,1.83,11.26,11.26,0,0,1-2,.93V29.2H94.3a15.47,15.47,0,0,1,15.42,15.43v2.29H115a7.93,7.93,0,0,1,7.9,7.91V73.2A7.93,7.93,0,0,1,115,81.11h-5.25v2.07A15.48,15.48,0,0,1,94.3,98.61H55.23L31.81,118.72a2.58,2.58,0,0,1-3.65-.29,2.63,2.63,0,0,1-.63-1.85l1.25-18h-.21A15.45,15.45,0,0,1,13.16,83.18V81.11H7.91A7.93,7.93,0,0,1,0,73.2V54.83a7.93,7.93,0,0,1,7.9-7.91h5.26v-2.3A15.45,15.45,0,0,1,28.57,29.2H57.49ZM82.74,47.32a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm-42.58,0a9.36,9.36,0,1,1-9.36,9.36,9.36,9.36,0,0,1,9.36-9.36Zm6.38,31.36a2.28,2.28,0,0,1-.38-.38,2.18,2.18,0,0,1-.52-1.36,2.21,2.21,0,0,1,.46-1.39,2.4,2.4,0,0,1,.39-.39,3.22,3.22,0,0,1,3.88-.08A22.36,22.36,0,0,0,56,78.32a14.86,14.86,0,0,0,5.47,1A16.18,16.18,0,0,0,67,78.22,25.39,25.39,0,0,0,72.75,75a3.24,3.24,0,0,1,3.89.18,3,3,0,0,1,.37.41,2.22,2.22,0,0,1,.42,1.4,2.33,2.33,0,0,1-.58,1.35,2.29,2.29,0,0,1-.43.38,30.59,30.59,0,0,1-7.33,4,22.28,22.28,0,0,1-7.53,1.43A21.22,21.22,0,0,1,54,82.87a27.78,27.78,0,0,1-7.41-4.16l0,0ZM94.29,34.4H28.57A10.26,10.26,0,0,0,18.35,44.63V83.18A10.26,10.26,0,0,0,28.57,93.41h3.17a2.61,2.61,0,0,1,2.41,2.77l-1,14.58L52.45,94.15a2.56,2.56,0,0,1,1.83-.75h40a10.26,10.26,0,0,0,10.22-10.23V44.62A10.24,10.24,0,0,0,94.29,34.4Z"/>
+				</svg>
+			</div>
+			<div class="chatbot_content" id="chatbot_content">
+				<div class="chatbot_body">
+					<div class="chatbot_header">
+						<p>Preguntas frecuentes</p>
+						<img class="wave" oncontextmenu="return false;" draggable="false" ondragstart="return false;" src="assets/wave.svg">
+					</div>
+					<div class="conversation">
+						<div class="message" id="bot_message">
+							<p>¿Cómo te puedo ayudar?</p>
+						</div>
+						<div id="questions"></div>
+						<div class="message element_hidden" id="bot_answer"></div>
+						<div class="message element_hidden hoverable" tabindex="0" id="back">&#8678; Volver a las preguntas</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="fondo-video activo" id="fondo-video"></div>
-
-	<script src="js/second.js"></script>
 
 	<footer>
 		<div class="div_frase reveal-text">
 			<p class="frase">¡QUICHÉ SIEMPRE!... <br> ¡TRAS EL TRIUNFO!</p>
 		</div>
-		<p class="copyright">Quiché - <script src="js/date.js"></script> Copyright &copy;. Todos los derechos reservados</p>
+		<p class="copyright"></p>
 		<p class="website_programer">Página web programada por:</p>
 		<a target="_blank" href="https://alexoterooficial.github.io/"><img class="Alex_logo" src="https://alexoterooficial.github.io/assets/Alex_Otero-Logo.png" alt=""></a>
 	</footer>
 
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+	<script src="https://scouts28quiche.org/js/second.js"></script>
 </body>
 </html>

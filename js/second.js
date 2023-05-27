@@ -1,75 +1,23 @@
 const imagen1 = document.getElementById('imagen1');
-const maps_option = document.getElementById('map_button');
 
 const menu_icon = document.getElementById('menu_icon');
 const menu = document.getElementById('menu');
-
-const botonAceptarCookies = document.getElementById('btn-aceptar-cookies');
-const botonNoAceptarCookies = document.getElementById('btn-no_aceptar-cookies');
-const avisoCookies = document.getElementById('aviso-cookies');
-const fondoAvisoCookies = document.getElementById('fondo-aviso-cookies');
-
-const btnCerrarVideo = document.getElementById('close_video');
-const video_pop_up = document.getElementById('video_pop-up');
-const fondoVideo = document.getElementById('fondo-video');
-const video = document.getElementById('video');
-
-const gallery_sections = document.getElementById('gallery_sections');
+const menuLinks = document.querySelectorAll('.menu-link');
 
 const job_1 = document.getElementById('job_1');
 
-const maps_google_iframe = document.getElementById('map_iframe');
-const maps_google_button = document.getElementById('map_button');
-const footer_absolute = document.getElementById('footer_absolute');
-
-const fondoCard = document.getElementById('fondo-job');
-const body = document.body;
-
 const bot_icon = document.getElementById('chatbot_icon');
 const bot_cnt = document.getElementById('chatbot_content');
+const tooltip = document.getElementById('tooltip');
 
 const questions_container = document.getElementById('questions');
 const bot_message = document.getElementById('bot_message');
 const bot_answer = document.getElementById('bot_answer');
 const back = document.getElementById('back');
-const questions = ["¿En qué horario se reúnen para actividades?", "¿Dónde se ubican?", "¿Qué necesito para inscribir a mi hijo/a a los Scouts?", "¿Cuál es la cuota anual y qué incluye?", "¿A qué edad me puedo unir a los Scouts?"];
-const answers = ["Nos reunimos todos los sábados a partir de las 4:00 hasta las 6:00 de la tarde", "Nos ubicamos en: 04870, C. 8 200, Espartaco, Coyoacán, Ciudad de México, CDMX", "Que su hijo/a asista a actividades tres sábados para que tome la decisión", "La cuota anual incluye seguro scout, derecho a participar en las actividades en el parque y a todas las actividades a nivel provincia y/o nacional, material para las actividades.", "Para ser muchacho/a debes tener entre 7 y 22 años cumplidos, si tienes más puedes participar como voluntario"];
-const cnt = document.querySelector('.cnt');
-var sectionIndex = 0;
-const cnt_sections = cnt.children.length;
+const questions = ["¿En qué horario se reúnen para actividades?", "¿Dónde se ubican?", "¿Qué necesito para inscribir a mi hijo/a a los Scouts?", "¿Cuál es la cuota anual y qué incluye?", "¿A qué edad me puedo unir a los Scouts?", "¿Tienes una pregunta que no está aquí?"];
+const answers = ["Nos reunimos todos los sábados a partir de las 4:00 hasta las 6:00 de la tarde", "Nos ubicamos en: 04870, C. 8 200, Espartaco, Coyoacán, Ciudad de México, CDMX.", "Que su hijo/a asista a actividades tres sábados para que tome la decisión", "La cuota anual incluye seguro scout, derecho a participar en las actividades en el parque y a todas las actividades a nivel provincia y/o nacional, material para las actividades.", "Para ser muchacho/a debes tener entre 7 y 22 años cumplidos, si tienes más puedes participar como voluntario", "Puedes mandar un mensaje por WhatsApp al siguiente número y te responderemos con gusto: <a class='chatbot_phone' href='https://api.whatsapp.com/send?phone=525513638299&app'>5513638299</a>"];
 
-if (cnt) {
-	left.addEventListener('click', () => {
-		sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : cnt_sections - 1;
-		cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
-	});
-
-	right.addEventListener('click', () => {
-		sectionIndex = (sectionIndex < (cnt_sections - 1)) ? sectionIndex + 1 : 0;
-		cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
-	});
-
-	left.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : cnt_sections - 1;
-			cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
-		}
-	});
-
-	right.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			sectionIndex = (sectionIndex < (cnt_sections - 1)) ? sectionIndex + 1 : 0;
-			cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
-		}
-	});
-
-	setInterval(function(){
-		sectionIndex = (sectionIndex < (cnt_sections - 1)) ? sectionIndex + 1 : 0;
-		cnt.style.transform = 'translateX(' + (sectionIndex) * (-100 / cnt_sections) + '%)';
-	}, 8000);
-}
-
-
+const copyright = document.querySelector('.copyright');
 
 const cargarImagen = (entradas, observador) => {
 	entradas.forEach((entrada) => {
@@ -85,13 +33,9 @@ const observador = new IntersectionObserver(cargarImagen, {
 	threshold: 0.8
 });
 
-if (video_pop_up){
-	observador.observe(video_pop_up);
-}
-
 if (imagen1) {
 	let imageCounter = 1;
-	while (imageCounter <= 5) {
+	while (imageCounter <= 6) {
 		var imageName = 'imagen' + imageCounter;
 		var imageNameid = document.getElementById(imageName);
 		if (imageNameid){
@@ -101,51 +45,117 @@ if (imagen1) {
 	}
 }
 
-if (maps_option) {
-	observador.observe(maps_option);
-}
+// Obtenemos todos los enlaces del header
+const links = document.querySelectorAll('.header-link');
 
+// Removemos el foco y el efecto hover al hacer clic en un enlace
+links.forEach(link => {
+  link.addEventListener('click', () => {
+	link.blur(); // Removemos el foco
+	link.classList.remove('hover-effect'); // Removemos la clase del efecto hover
+  });
+});
 
-
-if (gallery_sections) {
-	var eachImage = document.querySelectorAll('.images');
-
-	eachImage.forEach(function(image, index) {
-		image.addEventListener("keyup", function(event) {
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				image.click();
-			}
-		});
+menuLinks.forEach(link => {
+	link.addEventListener('click', () => {
+	  const menu = document.getElementById('menu');
+	  const menuIcon = document.getElementById('menu_icon');
+	  menu.classList.remove('active_menu');
+	  menuIcon.classList.remove('cross');
 	});
+});
+
+// Obtén todos los enlaces de desplazamiento suave en tu página
+const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+
+// Agrega un evento de clic a cada enlace
+smoothScrollLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Evita el comportamiento de desplazamiento predeterminado
+
+    const targetId = link.getAttribute('href'); // Obtiene el valor del atributo href del enlace
+    const targetElement = document.querySelector(targetId); // Obtiene el elemento al que se desea desplazar
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia el elemento
+    }
+  });
+});
+
+$(document).ready(function() {
+	const targetPosition = $('#Inicio').offset().top + $('#Inicio').outerHeight(); // Punto específico del documento
+
+	$(window).scroll(function() {
+	  const scrolled = $(window).scrollTop();
+
+	  if (scrolled >= targetPosition) {
+		$('#header-intro').css('background-color', 'rgba(102, 153, 204, 1.0)'); // 100% de valor alpha
+		$('#header-intro').css('box-shadow', '0px 5px 20px rgba(0, 0, 0, 0.16)'); // Valor alpha de la sombra
+	  } else {
+		const alphaValue = scrolled / targetPosition;
+		$('#header-intro').css('background-color', `rgba(102, 153, 204, ${alphaValue})`);
+		$('#header-intro').css('box-shadow', '0px 5px 20px rgba(0, 0, 0, 0)');
+	  }
+	});
+});
+
+const carousel = document.querySelector('.carousel-inner');
+const image = carousel.querySelector('img');
+let currentIndex = 1;
+const maxIndex = 10; // Número máximo de imágenes
+const interval = 5000; // Intervalo en milisegundos (5 segundos)
+let intervalId; // Variable para almacenar el ID del intervalo
+let pausedIndex; // Variable para almacenar el índice cuando se pausa el carrusel
+
+function getNextImage() {
+  const imagePath = `https://scouts28quiche.org/assets/tropas_de_scouts_${currentIndex}.jpeg`;
+  image.src = imagePath;
 }
 
-function showImg(number, id){
-	var showImgList = document.getElementById('photoList' + number);
-	var clickedImg = document.getElementById(id);
-	observador.observe(showImgList);
-	setTimeout(function(){
-		showImgList.classList.toggle('inside');
-	}, 0.1);
-	showImgList.classList.toggle('visible_photos');
-	
-	if (showImgList.classList.contains("visible_photos")){
-		document.getElementById('view_imagesList').scrollIntoView();
-		let i = 1;
-		while (i <= 5){
-			var actualImgList = document.getElementById("photoList" + [i]);
-			if (actualImgList != showImgList){
-				actualImgList.classList.remove('visible_photos');
-				actualImgList.classList.remove('inside');
-			}
-			i++;
-		}
+function slideToNext() {
+  carousel.style.transform = `translateX(200%)`;
+  setTimeout(() => {
+    getNextImage();
+    carousel.style.transform = 'translateX(0)';
+  }, 500);
+  currentIndex = (currentIndex % maxIndex) + 1;
+}
+
+function startCarousel() {
+  intervalId = setInterval(slideToNext, interval);
+}
+
+function pauseCarousel() {
+  clearInterval(intervalId);
+  pausedIndex = currentIndex; // Almacenar el índice actual cuando se pausa el carrusel
+}
+
+function handleWindowResize() {
+  if (window.innerWidth < 767) {
+    pauseCarousel();
+    carousel.style.transform = 'none'; // Restablecer la transformación al detener el carrusel
+  } else {
+    if (intervalId) {
+		// El carrusel está en funcionamiento pero la pantalla es mayor o igual a 767
+		pauseCarousel(); // Pausar el carrusel
+		getNextImage(); // Cargar la imagen actual
+		startCarousel(); // Iniciar el carrusel
 	}
+  }
 }
 
+getNextImage(); // Cargar la primera imagen
 
+if (window.innerWidth < 767) {
+  pauseCarousel(); // Detener el carrusel si la pantalla es menor a 767
+  carousel.style.transform = 'none'; // Restablecer la transformación al cargar la página
+} else {
+  startCarousel(); // Iniciar el carrusel si la pantalla es mayor o igual a 767
+}
 
-function menu_f(){
+window.addEventListener('resize', handleWindowResize);
+
+function menu_icon_pressed() {
 	menu.classList.toggle('active_menu');
 	menu_icon.classList.toggle('cross');
 	if (bot_cnt && bot_icon) {
@@ -155,143 +165,29 @@ function menu_f(){
 }
 
 menu_icon.addEventListener("keyup", function(event) {
-	if (event.keyCode === 13) {
+	if (event.key === 'Enter') {
 		event.preventDefault();
-		menu_f();
+		menu_icon_pressed();
 	}
 });
 
-
-if(!localStorage.getItem('cookies-aceptadas')){
-	avisoCookies.classList.add('activo');
-	fondoAvisoCookies.classList.add('activo');
-} 
-else {
-	if (localStorage.getItem('cookies-aceptadas') === 'true'){
-		if (maps_google_button) {
-			maps_google_button.parentNode.removeChild(maps_google_button);
-		}
-	}
-	else if (localStorage.getItem('cookies-aceptadas') === 'false'){
-		if (maps_google_iframe) {
-			maps_google_iframe.parentNode.removeChild(maps_google_iframe);
-			if (footer_absolute){
-				footer_absolute.classList.add('absolute');
-			}
-		}
-
-	}
-}
-
-if (botonAceptarCookies) {
-	botonAceptarCookies.addEventListener('click', () => {
-		avisoCookies.classList.remove('activo');
-		fondoAvisoCookies.classList.remove('activo');
-
-		localStorage.setItem('cookies-aceptadas', true);
-		if (maps_google_button){
-			maps_google_button.parentNode.removeChild(maps_google_button);
-		}
-	});
-
-	botonNoAceptarCookies.addEventListener('click', () => {
-		avisoCookies.classList.remove('activo');
-		fondoAvisoCookies.classList.remove('activo');
-
-		localStorage.setItem('cookies-aceptadas', false);
-		if (maps_google_iframe){
-			maps_google_iframe.parentNode.removeChild(maps_google_iframe);
-		}
-	});
-
-	document.cookie = "cookies-aceptadas; SameSite = Strict; secure;"; 
-}
-
-
-if (btnCerrarVideo && fondoVideo) {
-	btnCerrarVideo.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
-			event.preventDefault();
-			btnCerrarVideo.click();
-		}
-	});
-
-	btnCerrarVideo.addEventListener('click', () => {
-		video.pause()
-		video_pop_up.classList.remove('inside');
-		fondoVideo.classList.remove('activo');
-		setTimeout(function(){
-			video_pop_up.remove();
-			fondoVideo.remove();
-		}, 800);
-	});
-
-	fondoVideo.addEventListener('click', () => {
-		video.pause()
-		video_pop_up.classList.remove('inside');
-		fondoVideo.classList.remove('activo');
-		setTimeout(function(){
-			video_pop_up.remove();
-			fondoVideo.remove();
-		}, 800);
-	});
-}
-
-function openCard(number){
-	var modalCard = document.getElementById('modal_job_' + number);
-	fondoCard.classList.add('activo');
-	modalCard.classList.add('active');
-	modalCard.classList.add('inside');
-	body.classList.add('locked');
-}
-
-if (job_1) {
-	var eachJob = document.querySelectorAll('.job_info');
-	var eachCard = document.querySelectorAll('.close_card_btn');
-	
-	eachJob.forEach(function(job, index) {
-		job.addEventListener("keyup", function(event) {
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				job.click();
-			}
-		});
-	});
-
-	
-	eachCard.forEach(function(card, index) {
-		card.addEventListener("keyup", function(event) {
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				card.click();
-			}
-		});
-	});
-}
-
-
-function closeCard(number){
-	var modalCard = document.getElementById('modal_job_' + number);
-	modalCard.classList.remove('inside');
-	setTimeout(function(){
-		fondoCard.classList.remove('activo');
-		modalCard.classList.remove('active');
-		body.classList.remove('locked');
-	}, 600);
-}
-
-
+menu_icon.addEventListener('click', () => {
+	menu_icon_pressed();
+});
 
 if (bot_cnt && bot_icon) {
 
 	bot_icon.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
+		if (event.key === 'Enter') {
 			event.preventDefault();
 			bot_icon.click();
 		}
 	});
 
 	bot_icon.addEventListener('click', () => {
+		if(!tooltip.classList.contains('hidden')){
+			tooltip.classList.add('hidden');
+		}
 		bot_icon.classList.toggle('active_bot');
 		bot_cnt.classList.toggle('active_bot');
 	});
@@ -330,7 +226,7 @@ function question_answer(number, id) {
 if (back) {
 
 	back.addEventListener("keyup", function(event) {
-		if (event.keyCode === 13) {
+		if (event.key === 'Enter') {
 			event.preventDefault();
 			back.click();
 		}
@@ -372,3 +268,19 @@ function reset_questions() {
 		n++;
 	}
 }
+
+copyright.innerHTML = 'Quiché - ' + new Date().getFullYear() + ' Copyright &copy;. Todos los derechos reservados.';
+
+var swiper = new Swiper('.scouts-slider', {
+	spaceBetween: 30,
+	effect: 'fade',
+	loop: true,
+	mousewheel: {
+	  invert: false,
+	},
+	// autoHeight: true,
+	pagination: {
+	  el: '.scouts-slider__pagination',
+	  clickable: true,
+	}
+});
