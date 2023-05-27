@@ -262,6 +262,26 @@ function reset_questions() {
 	}
 }
 
+// Detectar los eventos de cambio de orientación y cambio de tamaño de ventana
+window.addEventListener('orientationchange', updateChatbotDisplay);
+window.addEventListener('resize', updateChatbotDisplay);
+
+// Función para actualizar la visualización del chatbot
+function updateChatbotDisplay() {
+  // Obtener la altura actual del dispositivo
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  
+  // Verificar si el dispositivo está en modo horizontal y la altura es menor a 675px
+  if (window.matchMedia("(orientation: landscape)").matches && windowHeight < 675) {
+    document.getElementById('chatbot').style.display = 'none'; // Ocultar el chatbot
+  } else {
+    document.getElementById('chatbot').style.display = 'block'; // Mostrar el chatbot
+  }
+}
+
+// Llamar a la función inicialmente para configurar el estado del chatbot
+updateChatbotDisplay();
+
 copyright.innerHTML = 'Quiché - ' + new Date().getFullYear() + ' Copyright &copy;. Todos los derechos reservados.';
 
 var swiper = new Swiper('.scouts-slider', {

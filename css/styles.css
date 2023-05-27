@@ -699,7 +699,11 @@ p.tooltip-text.hidden {
     border-color: #fff transparent transparent transparent;
 }
 
-
+@media (orientation: landscape) and (max-height: 675px) {
+	#chatbot {
+	  display: none;
+	}
+  }
 
 .element_hidden, #close_menu {
 	display: none;
