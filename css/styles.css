@@ -14,8 +14,6 @@
 
 :focus-visible:not(ul > li > .header-link), .header_link_logo:focus-visible {
 	outline: #000 solid 2px;
-	padding: 0.05vh 0.1vh;
-	border-radius: 2px;
 }
 
 .chatbot_icon:focus-visible, .question:focus-visible {
