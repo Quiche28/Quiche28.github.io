@@ -157,10 +157,9 @@ function menu_icon_pressed() {
 	menu.classList.toggle('active_menu');
 	menu_icon.classList.toggle('cross');
 	close_menu.classList.toggle('active');
-	if (bot_cnt && bot_icon) {
-		bot_icon.classList.remove('active_bot');
-		bot_cnt.classList.remove('active_bot');
-	}
+	bot_icon.classList.remove('active_bot');
+	bot_cnt.classList.remove('active_bot');
+	reset_questions();
 }
 
 menu_icon.addEventListener("keyup", function(event) {
@@ -187,6 +186,7 @@ bot_icon.addEventListener('click', () => {
 	}
 	bot_icon.classList.toggle('active_bot');
 	bot_cnt.classList.toggle('active_bot');
+	reset_questions();
 });
 
 reset_questions();
