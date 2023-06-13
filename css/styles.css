@@ -37,14 +37,15 @@ a:active:hover, a:visited:hover, a:link:hover, a:active, a:hover, a:visited, a:l
 	--iterations: 1;
 }
 
-html.gallery_scroll {
-	scroll-padding-top: 100px;
+html {
+	scroll-padding-top: 125px;
 	scroll-behavior: smooth;
 }
 
 body {
 	background: #fff;
 	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	overflow-x: hidden;
 }
 
@@ -98,7 +99,7 @@ header.sticky {
 		opacity: 0;
 	}
 
-	footer .copyright:after {
+	footer .line:after {
 		width: 17rem;
 		max-width: 130%;
 	}
@@ -183,6 +184,7 @@ header ul.menu_list-no_mobile {
   	-webkit-user-select: none;
   	-ms-user-select: none;
   	user-select: none;
+	color: #fff;
 }
 
 .menu_icon {
@@ -333,7 +335,7 @@ header#header-intro {
 }
 
 /* Cambiar el diseño en pantallas pequeñas */
-@media screen and (max-width: 767px) {
+ @media screen and (max-width: 767px) {
 	.contains_side-img {
 		flex-direction: column; /* Cambiar a un diseño de columna en pantallas pequeñas */
 	}
@@ -352,6 +354,12 @@ header#header-intro {
 	margin: 0 0 1rem 0;
 	text-align: justify;
 }
+
+.btn-sct {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5rem;
+}
 /* ¿Quiénes somos? */
 
 /* ¿Cómo funciona? */
@@ -368,6 +376,21 @@ header#header-intro {
     overflow: hidden;
     line-height: 0;
     fill: #fff;
+}
+
+.photo-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0 2.5%;
+    height: 50%;
+}
+
+.photo-media > img.images {
+    width: 9.2rem;
+    height: fit-content;
+    max-height: 49vh;
 }
 
 /* ¿Cómo funciona? */
@@ -426,11 +449,11 @@ header#header-intro {
 }
 }
 .scouts-slider__item.swiper-slide-active .scouts-slider__img img {
-opacity: 1;
+	opacity: 1;
 	transition-delay: 0.3s;
 }
 .scouts-slider__item.swiper-slide-active .scouts-slider__content > * {
-opacity: 1;
+	opacity: 1;
 	transform: none;
 }
 .scouts-slider__item.swiper-slide-active .scouts-slider__content > *:nth-child(1) {
@@ -922,12 +945,13 @@ footer {
   object-fit: contain;
 }
 
-.copyright {
+.copyright, .line {
   display: inline-block;
   position: relative;
+  margin: 0.3rem 0 0 0;
 }
 
-.copyright:after {
+.line:after {
   position: absolute;
   content: '';
   border-bottom: 1px solid #fff;
